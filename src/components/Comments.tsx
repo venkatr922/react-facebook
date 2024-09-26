@@ -26,23 +26,19 @@ function Comments(props: CommentsProps, ref: any) {
     ...rest
   } = props;
 
+  const data = []
   return (
     <Parser>
-      <span
-        className="fb-comments"
-        data-colorscheme={colorScheme}
-        data-numposts={numPosts}
-        data-href={href}
-        data-order-by={orderBy}
-        data-width={width}
-        data-skin={colorScheme}
-        data-mobile={mobile}
-        data-lazy={lazy}
-        {...rest}
-        ref={ref}
-      >
-        {children}
-      </span>
+     <h1>THis is a test component</h1>
+     {data.map((d) => {
+      return (
+        <h1>
+          <span>
+            {d.someId}
+          </span>
+        </h1>
+      )
+     })}
     </Parser>
   );
 }
